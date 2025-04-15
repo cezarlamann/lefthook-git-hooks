@@ -11,7 +11,8 @@ if [ -f .editorconfig ]; then
 fi
 
 # List of patterns to exclude
-exclude_patterns="\.md$|\.csv$|\.json$|\.xml$|\.tsv$|\.txt$|\.editorconfig$|\.gitignore$|\.gitattributes$"
+exclude_patterns="\.md$|\.csv$|\.Designer.cs$|\.csproj$|\.props$|\.json$|\.xml$|"
+exclude_patterns+="\.tsv$|\.txt$|\.editorconfig$|\.gitignore$|\.gitattributes$"
 
 fail=0
 files=$(git diff --cached --name-only --diff-filter=ACM)

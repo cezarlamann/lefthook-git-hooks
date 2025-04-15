@@ -14,7 +14,8 @@ if (Test-Path ".editorconfig") {
 
 # Patterns to exclude
 $ExcludePatterns = @(
-    '\.md$', '\.csv$', '\.json$', '\.xml$', '\.tsv$', '\.txt$', '\.editorconfig$', '\.gitignore$', '\.gitattributes$'
+    '\.md$', '\.csv$', '\.Designer.cs$', '\.json$', '\.xml$', '\.tsv$', '\.txt$'
+    , '\.editorconfig$', '\.gitignore$', '\.csproj$', '\.gitattributes$', '\.props$'
 )
 
 $Files = git diff --cached --name-only --diff-filter=ACM

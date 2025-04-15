@@ -68,8 +68,14 @@ dotnet_analyzer_diagnostic.severity = error
 dotnet_analyzer_diagnostic.category-StyleCop.severity = error
 
 # === File header enforcement (StyleCop) ===
-dotnet_diagnostic.SA1633.severity = warning
-file_header_template = // Copyright (c) 2025 MyCompany. All rights reserved.
+dotnet_diagnostic.SA1633.severity = error
+dotnet_diagnostic.SA1636.severity = error
+
+# === Xml Comment Analysis Disabled (StyleCop) ===
+dotnet_diagnostic.SA0001.severity = silent
+
+# Mandatory Elements documentation
+dotnet_diagnostic.SA1600.severity = error
 
 # Enforce block-scoped namespaces
 csharp_style_namespace_declarations = block_scoped:error
@@ -101,6 +107,13 @@ dotnet_naming_symbols.private_fields.required_modifiers =
 # === Enforce readonly for constructor-injected fields (Roslynator / custom rule) ===
 dotnet_diagnostic.RCS1213.severity = error  # RCS1213: Remove unused member declaration
 dotnet_diagnostic.RCS1118.severity = error  # Mark field as readonly (Roslynator)
+dotnet_diagnostic.RCS1138.severity = error  # Summary documentation mandatory
+dotnet_diagnostic.RCS1139.severity = error  # Summary documentation mandatory
+
+# Roslynator configurations
+dotnet_diagnostic.RCS1036.severity = silent
+dotnet_diagnostic.RCS0063.severity = silent
+dotnet_diagnostic.RCS1021.severity = silent # Expression-bodied members
 
 # this. and Me. preferences
 dotnet_style_qualification_for_event = false:silent
@@ -108,8 +121,11 @@ dotnet_style_qualification_for_field = false:silent
 dotnet_style_qualification_for_method = false:silent
 dotnet_style_qualification_for_property = false:silent
 
-dotnet_diagnostic.IDE0290.severity = none
+dotnet_diagnostic.IDE0290.severity = silent
 dotnet_diagnostic.IDE0005.severity = warning
+dotnet_diagnostic.IDE0008.severity = silent
+dotnet_diagnostic.IDE0058.severity = silent
+dotnet_diagnostic.IDE0053.severity = silent
 dotnet_diagnostic.IDE0035.severity = warning
 dotnet_diagnostic.IDE0040.severity = warning
 dotnet_diagnostic.IDE0044.severity = warning
